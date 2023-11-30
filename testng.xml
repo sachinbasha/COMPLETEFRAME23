@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Suite">
-	<listeners>
-		<listener class-name="com.trendcart.genricUtils.ListnerImplimentation"></listener>
-	</listeners>
-  <test thread-count="2" parallel="tests" name="Test">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
     <classes>
+      <class name="com.trendcart.testscript1.ManageUsersTest"/>
+      <class name="com.trendcart.testscript1.login1Test"/>
       <class name="com.trendcart.testscript1.TrackOrderTest"/>
-      <class name="com.trendcart.testscript1.Logintest"/>
+      <class name="com.trendcart.testscript1.LoginTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

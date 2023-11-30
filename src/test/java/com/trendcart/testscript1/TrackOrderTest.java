@@ -40,7 +40,7 @@ import com.trendcart.objectrepo.ShoppingPortalSignin;
 public class TrackOrderTest extends BaseClass{
 
 	@Test
-	public  void main() throws IOException, InterruptedException {
+	public  void TrackOrder() throws IOException, InterruptedException {
 		FileUtils f=new FileUtils();
 		WebDriverUtils u=new WebDriverUtils();
 		ExcelUtils e=new ExcelUtils();

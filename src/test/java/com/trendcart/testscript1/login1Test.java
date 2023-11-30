@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.trendcart.genricUtils.BaseClass;
 import com.trendcart.objectrepo.MyCart;
 
-public class logintest2 extends BaseClass{
+public class login1Test extends BaseClass{
 
 	
 	@Test

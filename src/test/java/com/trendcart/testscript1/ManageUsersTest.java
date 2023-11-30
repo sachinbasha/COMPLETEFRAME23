@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 import com.trendcart.genricUtils.ExcelUtils;
 import com.trendcart.genricUtils.FileUtils;
@@ -17,9 +18,10 @@ import com.trendcart.objectrepo.ShoppingPortalAdminLogin;
 import com.trendcart.objectrepo.ShoppingPortalHomePage;
 import com.trendcart.objectrepo.ShoppingPortalSignin;
 
-public class ManageUsers 
+public class ManageUsersTest  
 {
-	public static void main(String[] args) throws IOException
+	@Test
+	public void maintest() throws IOException
 	{
         WebDriver driver=new ChromeDriver();
 		ShoppingPortalHomePage p=new ShoppingPortalHomePage(driver);

@@ -32,6 +32,7 @@ public class BaseClass
 		Reporter.log("data base connected",true);
 		u.connectDb();
 	}
+	
 	@BeforeClass
 	public void confug_BC() throws IOException
 	{

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.demo.testscripts.testng">
+      <class name="com.trendcart.testscript1.ManageUsersTest">
         <methods>
-          <include name="test"/>
+          <include name="maintest"/>
         </methods>
-      </class> <!-- com.demo.testscripts.testng -->
+      </class> <!-- com.trendcart.testscript1.ManageUsersTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

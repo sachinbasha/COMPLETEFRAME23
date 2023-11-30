@@ -22,7 +22,7 @@ import com.trendcart.objectrepo.ShoppingPortalHomePage;
 import com.trendcart.objectrepo.ShoppingPortalSignin;
 import com.trendcart.genricUtils.*;
 //@Listeners(com.trendcart.genricUtils.ListnerImplementation.class)
-public class Logintest extends BaseClass{
+public class LoginTest extends BaseClass{
 
 	
 	@Test

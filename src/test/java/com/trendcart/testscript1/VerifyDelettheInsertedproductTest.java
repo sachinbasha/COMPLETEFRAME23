@@ -1,4 +1,4 @@
-package com.trendcart.testscript;
+package com.trendcart.testscript1;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -12,23 +12,28 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
 
-public class VerifyDelettheInsertedproduct {
+import com.trendcart.genricUtils.FileUtils;
+import com.trendcart.objectrepo.ShoppingPortalAdminLogin;
+import com.trendcart.objectrepo.ShoppingPortalAdminLogin;
 
-	public static void main(String[] args) throws IOException 
+public class VerifyDelettheInsertedproductTest {
+
+	@Test
+	public void VerifyDelet() throws IOException
 	{
-		FileInputStream fis=new FileInputStream (".\\src\\test\\resources\\commandataAdmin.property");
-		Properties p=new Properties();
-		p.load(fis);
-		String url = p.getProperty("url");
-		String username=p.getProperty("username");
-		String pwd=p.getProperty("Password");
-		WebDriver driver=new ChromeDriver();
-		driver.get(url);
 		FileInputStream fi=new FileInputStream (".\\src\\test\\resources\\testscript.xlsx");
-		driver.findElement(By.name("username")).sendKeys(username);
-		driver.findElement(By.name("password")).sendKeys(pwd);
-		driver.findElement(By.name("submit")).click();
+		FileUtils f=new FileUtils();
+		String url =           f.readDataFromPropertyFile("urladmin");
+		String adminname =     f.readDataFromPropertyFile("usernameadmin");
+	    String Passwordadmin = f.readDataFromPropertyFile("Passwordadmin");
+	    WebDriver driver=new ChromeDriver();
+		driver.get(url);
+		ShoppingPortalAdminLogin adminlgn=new ShoppingPortalAdminLogin(driver);
+		adminlgn.getUnttextfield().sendKeys(adminname);
+		adminlgn.getPwt().sendKeys(Passwordadmin);
+		adminlgn.getLogin();
 		driver.findElement(By.xpath("//a[text()=' Create Category ']")).click();
 		driver.findElement(By.name("category")).click();
 		Workbook wb = WorkbookFactory.create(fi);
@@ -72,6 +77,7 @@ public class VerifyDelettheInsertedproduct {
 	   WebElement seltbxproductavailability = driver.findElement(By.name("productAvailability"));
 	   Select c=new  Select(seltbxproductavailability);
 	   c.selectByVisibleText(productavailabilityDropdown);
+	   driver.quit();
 	   
 
 		
