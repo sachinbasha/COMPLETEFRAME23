@@ -3,11 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.trendcart.testscript1.ManageUsersTest">
+      <class name="com.trendcart.testscript1.LoginTest">
         <methods>
-          <include name="maintest"/>
+          <include name="confug_beforsuit"/>
+          <include name="confug_BM"/>
+          <include name="confug_AM"/>
+          <include name="confug_BC"/>
+          <include name="confug_AC"/>
+          <include name="confug_AS"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- com.trendcart.testscript1.ManageUsersTest -->
+      </class> <!-- com.trendcart.testscript1.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
